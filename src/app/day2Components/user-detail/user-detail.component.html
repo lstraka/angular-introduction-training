@@ -1,0 +1,10 @@
+<div style="background-color: white;" *ngIf="isUserss && user">
+
+<p>{{user.firstname}} {{user.lastname}}{{user.email}} {{user.age}}</p>
+Hobbies of the user
+<ul >
+  <li *ngFor="let hobby of user.hobbies">{{hobby}}</li>
+</ul>
+</div>
+
+<!-- TODO good example for usage of ngIF with else or else then  -->

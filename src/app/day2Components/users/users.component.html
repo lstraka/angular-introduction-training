@@ -1,0 +1,14 @@
+<div style="background-color: darkgray">
+  <p>users works!</p>
+  <div *ngFor="let user of users">
+    <app-user-detail [user]="user"></app-user-detail>
+  </div>
+</div>
+
+<br>
+<button (click)="userStats.incrementCount()">Increment first child value</button>
+<button (click)="incrementAllChilds()">Increment all children value</button>
+
+<app-user-stats></app-user-stats>
+
+<app-user-stats></app-user-stats>

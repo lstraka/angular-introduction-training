@@ -1,0 +1,14 @@
+<p>data-binding works!</p>
+{{counter}} <span >Lukas</span>{{thisIsString}} {{giveMeString()}}
+
+<button (click)=increment(1)>Click me</button>
+
+<button (dblclick)=increment(4)>Click me doubletime</button>
+
+
+<button (focus)=increment(50) (blur)=increment(-20) >focus me</button>
+
+<button (blur)=increment(-50) >go away from me</button>
+
+
+<button (click)="changeString = 'new string'">Click me</button>

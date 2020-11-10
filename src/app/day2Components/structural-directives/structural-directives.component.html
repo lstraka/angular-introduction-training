@@ -1,0 +1,37 @@
+<p *ngIf=condition>structural-directives works!</p>
+
+
+<p hidden=condition>i am using hidden directive</p>
+
+<button (click)="condition=!condition">toggle Condition</button>
+
+{{numbers}}
+
+<div *ngIf=condition>
+<div *ngFor="let num of myWallet.fees">
+<br>
+{{num}}. <span *ngFor="let income of myWallet.incomes">{{income}},</span>
+
+</div>
+</div>
+
+
+<br>
+<p>ngSwitch example</p>
+<div *ngFor="let num of numbers| evenNumbers">
+
+<ul [ngSwitch]=num>
+  <li *ngSwitchCase=1> I am case 1</li>
+  <li *ngSwitchCase=2> I am case 2</li>
+  <li *ngSwitchCase=3> I am case 3</li>
+  <li *ngSwitchCase=4> I am case 4</li>
+  <li *ngSwitchDefault> all other cases</li>
+</ul>
+</div>
+
+{{wannaBeLower | lowercase}}
+{{wannBeUpper | uppercase}}
+
+{{now | date: 'dd.mm.yyyy'}}
+
+<!-- {{'HELLO'| translate}} > Ahoj -->
