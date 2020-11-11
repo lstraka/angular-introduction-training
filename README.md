@@ -1,7 +1,7 @@
 # Angular 10 - basic introduction training 
 This project was created as a live preview of the presentation which was provided as an internal training to the collegues from Deutsche Telekom IT Solutions Slovakia. This project not contain any confident material and is available for anybody as a learning material. 
 
-Presentation is located here: [Angular-introduction basics PPTX](https://github.com/lstraka/angular-introduction-training/blob/master/Angular%20introduction%20training.pptx)
+Presentation is located here: [Angular-introduction basics PPTX](Angular%20introduction%20training.pptx)
 
 ## Project not contain node-modules
 Project don't contain node modules, after downloading the source, you have to manually run `npm install` in the root of that project.  
