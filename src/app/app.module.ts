@@ -13,6 +13,9 @@ import { LifeCycleHooksComponent } from './day2Components/life-cycle-hooks/life-
 import { UsersComponent } from './day2Components/users/users.component';
 import { UserDetailComponent } from './day2Components/user-detail/user-detail.component';
 import { UserStatsComponent } from './day2Components/user-stats/user-stats.component';
+import { UserProfileComponent } from './day2Components/user-profile/user-profile.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -28,10 +31,13 @@ import { UserStatsComponent } from './day2Components/user-stats/user-stats.compo
     UsersComponent,
     UserDetailComponent,
     UserStatsComponent,
+    UserProfileComponent,
+
   ],
   imports: [
     BrowserModule,
-    FeatureModule
+    FeatureModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

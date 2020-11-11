@@ -1,6 +1,7 @@
 import { UserStatsComponent } from './../user-stats/user-stats.component';
 import { Userr } from './../../userr';
 import { Component, OnInit, ViewChild, AfterViewInit, QueryList, ViewChildren } from '@angular/core';
+import { User } from 'src/app/my-first/my-first.component';
 
 @Component({
   selector: 'app-users',
@@ -14,6 +15,12 @@ export class UsersComponent implements OnInit, AfterViewInit {
   @ViewChildren(UserStatsComponent) allStats: QueryList<UserStatsComponent>;
   public users: Userr[];
 
+  public usr: User;
+
+  public messageFromChild: string;
+
+  hideProfile = true;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -24,6 +31,9 @@ export class UsersComponent implements OnInit, AfterViewInit {
     const us3 = new Userr('Usr3', 'LstName3', 7, 'emmail@hrasko.com', []);
     const us4 = new Userr('Palo', 'NemaMeno', 99, 'reqqf@hrasko.com', ['watchingTV']);
     const us5 = new Userr('janiko', 'hrasenkko', 64, 'janeko@hrasko.com', ['footbal', 'hockey', 'watchingTV']);
+
+    this.usr = new User('User From ', 'firstComp');
+    this.usr.age = 1;
 
     this.users.push(us1);
     this.users.push(us2);
@@ -37,6 +47,12 @@ export class UsersComponent implements OnInit, AfterViewInit {
       console.log(userStat);
       userStat.incrementCount();
     }
+  }
+
+  getMessageFromChild($event) {
+    console.log($event);
+    this.messageFromChild = $event;
+
   }
 
   ngAfterViewInit(): void {

@@ -5,10 +5,24 @@
   </div>
 </div>
 
-<br>
-<button (click)="userStats.incrementCount()">Increment first child value</button>
+<div *ngIf="usr">
+  <app-user-detail [user]="usr"></app-user-detail>
+</div>
+
+<br />
+<button (click)="userStats.incrementCount()">
+  Increment first child value
+</button>
 <button (click)="incrementAllChilds()">Increment all children value</button>
 
-<app-user-stats></app-user-stats>
+<app-user-stats [messageFromSibling]="messageFromChild"></app-user-stats>
 
 <app-user-stats></app-user-stats>
+<app-user-stats></app-user-stats>
+<app-user-stats></app-user-stats>
+
+<button (click)="hideProfile =! hideProfile">hide profile using ngIF</button>
+
+<app-user-profile (myFirstOutput)="getMessageFromChild($event)" *ngIf="hideProfile"></app-user-profile>
+
+<h2>{{messageFromChild}}</h2>

@@ -1,3 +1,4 @@
+import { UserService } from '../user.service';
 import { User } from './../../my-first/my-first.component';
 import { Userr } from './../../userr';
 import { Component, Input, OnInit } from '@angular/core';
@@ -9,12 +10,30 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserDetailComponent implements OnInit {
 
-  @Input() user: Userr ;
-  constructor() { }
+  private _user: User | Userr;
+  @Input() set user(user: Userr | User) {
+    this._user = user;
+    console.log(this.user ? this.user instanceof Userr : false);
+    this.isUserr = this.user ? this.user instanceof Userr : false;
+  }
+  get user() {
+    return this._user;
+  }
+  constructor(readonly userService: UserService) { }
 
-  isUserss = false;
+  isUserr = false;
   ngOnInit(): void {
-    this.isUserss = this.user ? this.user instanceof Userr : false;
+
+  }
+
+  public setUserToSubject(user: Userr): void {
+    console.log('setting user ', user);
+    this.userService.setSubject(user);
+  }
+
+  public setUserToBehaviorSubj(user: Userr): void{
+    console.log('setting behaviorSubj', user);
+    this.userService.setBehaviorSubject(user);
   }
 
 }

@@ -1,0 +1,8 @@
+<p>user-profile works!</p>
+<input [(ngModel)]="message"> {{message}}
+<button (click)="sendToParent()">Send to Parent</button>
+
+
+<div *ngIf="userFromOutside">
+<app-user-detail [user]="userFromOutside"></app-user-detail>
+</div>

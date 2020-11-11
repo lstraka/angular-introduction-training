@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-stats',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserStatsComponent implements OnInit {
 
+  @Input() messageFromSibling: string;
   public count = 0;
   constructor() { }
 

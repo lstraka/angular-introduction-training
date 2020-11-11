@@ -1,10 +1,21 @@
-<div style="background-color: white;" *ngIf="isUserss && user">
+<div style="background-color: white" *ngIf="user">
+  <div *ngIf="isUserr; else itsUser">
+    <p>
+      {{ user.firstname }} {{ user.lastname }}{{ user.email }} {{ user.age }}
+    </p>
+    Hobbies of the user
+    <ul>
+      <li *ngFor="let hobby of user.hobbies">{{ hobby }}</li>
+    </ul>
 
-<p>{{user.firstname}} {{user.lastname}}{{user.email}} {{user.age}}</p>
-Hobbies of the user
-<ul >
-  <li *ngFor="let hobby of user.hobbies">{{hobby}}</li>
-</ul>
+    <button (click)="setUserToSubject(user)">Set user as a Subject</button>
+    <button (click)="setUserToSubject(null)">Set null</button>
+    <button (click)="setUserToBehaviorSubj(user)">Set user as a Behavior Subject</button>
+    <button (click)="setUserToBehaviorSubj(null)">Set null for behavior Sbj</button>
+  </div>
+  <ng-template #itsUser>
+    workign
+    <p>{{ user.firstName }} {{ user.lastName }}{{ user.age }}</p>
+  </ng-template>
+  <!-- TODO good example for usage of ngIF with else or else then  -->
 </div>
-
-<!-- TODO good example for usage of ngIF with else or else then  -->
