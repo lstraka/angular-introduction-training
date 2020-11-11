@@ -1,6 +1,8 @@
-# Day1
+# Angular 10 - basic introduction training 
+This project was created as a live preview of the presentation which was provided as an internal training to the collegues from Deutsche Telekom IT Solutions Slovakia. This project not contain any confident material and is available for anybody as a learning material. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+## Project not contain node-modules
+Project don't contain node modules, after downloading the source, you have to manually run `npm install` in the root of that project.  
 
 ## Development server
 
