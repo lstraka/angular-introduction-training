@@ -1,0 +1,44 @@
+<p>ng-template-example works!</p>
+
+<ng-template><p>Some text</p></ng-template>
+
+<ng-template [ngIf]="templateTrue"
+  ><p>Text where directive [ngIf] is used</p></ng-template
+>
+
+<p *ngIf="templateTrue">**Text where directive [ngIf] is used</p>
+<br>
+===================================================================<br>
+NG IF ELSE
+
+<div *ngIf="templateTrue; else elseBlock">
+  <p>I am true ngIF block visible</p>
+</div>
+
+<ng-template #elseBlock><p>I am else block visible</p></ng-template>
+
+<button (click)="templateTrue = !templateTrue">toggle</button>
+
+<ng-content select="[first]"></ng-content>
+<br>
+============================================
+<br>
+NGIF - then / else
+
+<div *ngIf="templateTrue;then thenBlock else elseWithThenBlock">
+  <p>I probably will never be visible</p>
+</div>
+
+<ng-template #thenBlock><p>I am then block</p></ng-template>
+
+<ng-template #elseWithThenBlock><p>I am else block</p></ng-template>
+<ng-content select="[second]"></ng-content>
+
+<div *ngFor="let num of numbers">
+  {{num}}
+</div>
+
+
+<ng-container  *ngFor="let num of numbers">
+  {{num}}
+</ng-container>

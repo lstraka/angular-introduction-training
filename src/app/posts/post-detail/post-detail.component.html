@@ -1,0 +1,7 @@
+<p>post-detail works!</p>
+<ng-container *ngIf="post">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.body }}</p>
+</ng-container>
+
+<button (click)="savePost()" [disabled]="!post">Create</button>

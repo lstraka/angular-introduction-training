@@ -15,6 +15,10 @@ import { UserDetailComponent } from './day2Components/user-detail/user-detail.co
 import { UserStatsComponent } from './day2Components/user-stats/user-stats.component';
 import { UserProfileComponent } from './day2Components/user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
+import { NgTemplateExampleComponent } from './ng-template-example/ng-template-example.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostDetailComponent } from './posts/post-detail/post-detail.component';
+import { HttpClientModule} from '@angular/common/http';
 
 
 
@@ -32,12 +36,16 @@ import { FormsModule } from '@angular/forms';
     UserDetailComponent,
     UserStatsComponent,
     UserProfileComponent,
+    NgTemplateExampleComponent,
+    PostsComponent,
+    PostDetailComponent,
 
   ],
   imports: [
     BrowserModule,
     FeatureModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

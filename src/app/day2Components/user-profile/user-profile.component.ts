@@ -38,6 +38,7 @@ export class UserProfileComponent implements OnInit, OnDestroy {
       //   this.userFromOutside = user;
       // })
     );
+
   }
 
   sendToParent() {
